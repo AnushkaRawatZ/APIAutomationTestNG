@@ -10,7 +10,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 public class UpdateBookingTest {
 
-    @Test(dataProvider = "bookingIds", dataProviderClass = DataProviderUtil.class)
+    @Test(dataProvider = "bookingIds", dataProviderClass = DataProviderUtil.class, groups = "regression")
     public void updateBookingTest(int bookingId) {
         String token = getAuthToken();
 
@@ -35,5 +35,9 @@ public class UpdateBookingTest {
         response.then().body("additionalneeds", equalTo("Breakfast"));
 
         System.out.println("Updated booking with ID: " + bookingId);
+    }
+    @Test
+    public void exampleTest(){
+        System.out.println("Example Test 123");
     }
 }

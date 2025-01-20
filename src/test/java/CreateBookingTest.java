@@ -27,7 +27,7 @@ public class CreateBookingTest {
     BookingDates bookingDates = new BookingDates();
     String jsonRequest;
 
-    @Test(dataProvider = "excelData", dataProviderClass = DataProviderUtil.class)
+    @Test(dataProvider = "excelData", dataProviderClass = DataProviderUtil.class, groups = {"smoke", "regression"})
     public void testCreateRequest(String fname, String lname, int totalPrice, String depositPaidString, String checkIn, String checkOut, String additional){
         boolean depositPaid = Boolean.parseBoolean(depositPaidString);
         bookingRequest.setFirstName(fname);
@@ -80,5 +80,10 @@ public class CreateBookingTest {
         } catch (Exception e) {
             return dateString;
         }
+    }
+
+    @Test
+    public void exampleTest(){
+        System.out.println("Example Test 123");
     }
 }

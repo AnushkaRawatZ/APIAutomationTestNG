@@ -25,6 +25,8 @@ public class DataProviderUtil {
                 .extract().response();
 
         List<Integer> ids = response.jsonPath().getList("bookingid[0..7]");
+        System.out.println(ids);
+        bookingIds.clear();
         bookingIds.addAll(ids);
     }
 

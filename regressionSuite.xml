@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite Automation" parallel="classes" thread-count="3">
+    <test name="Regression Test">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="CreateBookingTest"/>
+            <class name="UpdateBookingTest"/>
+            <class name="GetBookingsTest"/>
+            <class name="DeleteBookingTest"/>
+        </classes>
+    </test>
+</suite>

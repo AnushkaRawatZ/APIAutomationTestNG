@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class GetBookingsTest {
-    @Test
+    @Test(groups = "regression")
     public void testGetBookingDetails() {
         RestAssured.given()
                 .baseUri(Constants.BASE_URI)
@@ -15,5 +15,9 @@ public class GetBookingsTest {
                 .then()
                 .statusCode(SC_OK)
                 .log().all();
+    }
+    @Test
+    public void exampleTest(){
+        System.out.println("Example Test 123");
     }
 }

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class DeleteBookingTest {
 
-    @Test(dataProvider = "bookingIds", dataProviderClass = DataProviderUtil.class)
+    @Test(dataProvider = "bookingIds", dataProviderClass = DataProviderUtil.class, groups = {"smoke", "regression"})
     public void testDeleteBooking(int bookingId) {
         String token = AuthUtil.getAuthToken();
         RestAssured.given()
@@ -18,5 +18,10 @@ public class DeleteBookingTest {
                 .delete()
                 .then()
                 .statusCode(201);
+    }
+
+    @Test
+    public void exampleTest(){
+        System.out.println("Example Test 123");
     }
 }
