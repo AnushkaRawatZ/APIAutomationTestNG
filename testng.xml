@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API Automation">
+    <test name="Smoke Test">
+        <classes>
+            <class name="CreateBookingTest" />
+            <class name="GetBookingsTest"/>
+            <class name="UpdateBookingTest"/>
+            <class name="DeleteBookingTest"/>
+        </classes>
+    </test>
+</suite>
